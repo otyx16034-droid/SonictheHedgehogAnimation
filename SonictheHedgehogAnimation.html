@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刺猬索尼克 - 官方粉丝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a4cb2);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            color: #f8b500;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0d2ff;
+            margin-bottom: 20px;
+        }
+        
+        .sonic-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .sonic-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .card h2 {
+            color: #f8b500;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f8b500;
+            padding-bottom: 8px;
+        }
+        
+        .links-list {
+            list-style-type: none;
+        }
+        
+        .links-list li {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .links-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .links-list a {
+            color: #a0d2ff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .links-list a:hover {
+            color: #f8b500;
+        }
+        
+        .links-list a::before {
+            content: "✅";
+            margin-right: 10px;
+            font-size: 0.8rem;
+            color: #f8b500;
+        }
+        
+        .follow-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .follow-btn {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px 20px;
+            background: linear-gradient(to right, #f8b500, #ff6b00);
+            border: none;
+            border-radius: 50px;
+            color: #1a2a6c;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .follow-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(248, 181, 0, 0.4);
+        }
+        
+        .game-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .game-info {
+            flex-grow: 1;
+        }
+        
+        .game-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #a0d2ff;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(248, 181, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(248, 181, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(248, 181, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1></h1>
+            <p class="subtitle">世界上最快刺猬索尼克！</p><button class="follow-o ">
+            <img src="https://static.wikia.nocookie.net/sonic/images/0/09/%E3%80%8A%E5%88%BA%E7%8C%AC%E7%B4%A2%E5%B0%BC%E5%85%8B%E3%80%8B%E7%BE%8E%E7%89%88%E6%A0%87%E5%BF%97.png/revision/latest?cb=20170421103000&path-prefix=zh" alt="刺猬索尼克" class="sonic-image">
+        </header>
+        
+        <div class="content-grid">
+            <div class="card">
+                <h2>作品</h2>
+                <ul class="links-list">
+                    <li><a href="https://v.douyin.com/LhgUSGRkbEo/">索尼克与朋友</a></li>
+                    <li><a href="https://v.douyin.com/YExn226T8QM/" target="_blank">SEGA世嘉商店</a></li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>游戏</h2>
+                <ul class="links-list">
+                    <li><a href="https://store.steampowered.com/app/2951690/Sonic_Rumble/" target="_blank">索尼克大乱斗</a></li>
+                    <li><a href="https://store.steampowered.com/app/2486820/_/" target="_blank">索尼克赛车 交叉世界</a></li>
+                    <li><a href="https://store.steampowered.com/app/2513280/x/?curator_clanid=34987537" target="_blank">索尼克×夏特 世代重启</a></li>
+                </ul>
+            </div>
+            
+            <div class="card game-card">
+                <h2>最新游戏</h2>
+                <div class="game-info">
+                    <img src="https://asia.sega.com/SonicRacingCrossWorlds/assets/images/cht/videos/thumbnail/launch.webp" alt="索尼克游戏" class="game-img">
+                    <p>体验《索尼克赛车 交叉世界》的极速冒险！从经典的平台游戏到现代的3D开放世界，索尼克系列一直带给玩家无尽的乐趣和刺激。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>关注</h2>
+            <p>获取最新的索尼克新闻、游戏发布信息和独家内容！</p>
+            
+            <div class="follow-section">
+                <button class="follow-btn pulse">
+                    <span><a href="https://xhslink.com/m/9A5HK31Z6vg">小红书</a>
+                </button>
+                <button class="follow-btn pulse">
+                    <span><a href="https://v.douyin.com/KdbaaU3XHvk/">抖音</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 刺猬索尼克粉丝站 | 本网站为粉丝创作，与SEGA无官方关联</p>
+    </footer>
+</body>
+</html>
